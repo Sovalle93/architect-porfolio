@@ -9,7 +9,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { href: '/', label: 'Proyectos' },
+    { href: '/', label: 'Inicio' },
+     { href: '/projects', label: 'Proyectos' },
     { href: '/gallery', label: 'Objetos' },
     { href: '/contact', label: 'Contacto' },
     { href: '/about', label: 'Estudio' },

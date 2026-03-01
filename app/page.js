@@ -1,12 +1,9 @@
-import ProjectGrid from './components/ProjectGrid';
-import { PROJECTS_DATA } from './data/ProjectsData';
+import HeroCarousel from './components/HeroCarrousel';
 
 export default function Home() {
-  const featuredProjects = PROJECTS_DATA.filter(project => project.featured);
-  
   return (
     <main>
-      <ProjectGrid projects={featuredProjects} />
+      <HeroCarousel />
     </main>
   );
 }

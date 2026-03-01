@@ -12,14 +12,18 @@
     "@heroicons/react": "^2.2.0",
     "framer-motion": "^12.18.1",
     "keen-slider": "^6.8.6",
-    "next": "15.3.3",
+    "next": "^15.5.12",
+    "nodemailer": "^8.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-icons": "^5.5.0"
+    "react-google-recaptcha": "^3.1.0",
+    "react-icons": "^5.5.0",
+    "resend": "^6.9.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/nodemailer": "^7.0.11",
     "eslint": "^9",
     "eslint-config-next": "15.3.3",
     "tailwindcss": "^4"
