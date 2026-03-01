@@ -13,7 +13,7 @@ export default function Navbar() {
      { href: '/projects', label: 'Proyectos' },
     { href: '/gallery', label: 'Objetos' },
     { href: '/contact', label: 'Contacto' },
-    { href: '/about', label: 'Estudio' },
+    {},
   ];
 
   return (

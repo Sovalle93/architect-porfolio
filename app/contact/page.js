@@ -58,9 +58,24 @@ export default function ContactPage() {
     setTimeout(() => setShowNotification(false), 5000);
   };
 
-  // ✅ Use NEXT_PUBLIC_ for the site key (this is SAFE)
-  const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+      // At the top of your component, add:
+      const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
+      // Add a console log to verify it's loading
+      console.log('reCAPTCHA Site Key loaded:', recaptchaSiteKey ? 'YES' : 'NO');
+
+      // In your JSX, add a fallback
+      {recaptchaSiteKey ? (
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          sitekey={recaptchaSiteKey}
+          theme="light"
+        />
+      ) : (
+        <div className="text-red-500 text-center">
+          Error: reCAPTCHA not configured. Please contact the administrator.
+        </div>
+      )}
   return (
     <section className="min-h-screen bg-[#f6f6f2] py-16 px-4">
       <div className="max-w-2xl mx-auto">

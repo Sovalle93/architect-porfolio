@@ -4,8 +4,8 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
 export const metadata = {
-  title: 'Architect Portfolio | Studio Name',
-  description: 'Professional portfolio of architectural designs',
+  title: 'Denise Subercaseaux Arquitecta',
+  description: 'Portafolio de Denise Subercaseaux, arquitecta especializada en diseño de interiores y mobiliario. Explora sus proyectos, objetos y contacto para colaboraciones.',
 }
 
 export default function RootLayout({ children }) {
