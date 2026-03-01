@@ -1,0 +1,7 @@
+# netlify.toml
+[build]
+  publish = ".next"
+  command = "npm run build"
+
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_RECAPTCHA_SITE_KEY"
