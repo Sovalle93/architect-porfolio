@@ -10,10 +10,9 @@ export default function Navbar() {
 
   const links = [
     { href: '/', label: 'Inicio' },
-     { href: '/projects', label: 'Proyectos' },
+    { href: '/projects', label: 'Proyectos' },
     { href: '/gallery', label: 'Objetos' },
     { href: '/contact', label: 'Contacto' },
-    {},
   ];
 
   return (
@@ -21,7 +20,7 @@ export default function Navbar() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed w-full z-50 bg-[#f6f6f2] shadow-sm font-hacen"
+      className="fixed w-full z-50 bg-[#f6f6f2] shadow-sm"
       style={{ 
         fontFamily: 'var(--font-hacen)',
         height: '6.8rem',
