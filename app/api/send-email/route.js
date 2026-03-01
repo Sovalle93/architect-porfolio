@@ -1,16 +1,35 @@
 import { Resend } from 'resend';
 
+// ✅ These are SAFE here because this runs on the server only
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { name, email, whatsapp, message } = body;
+    const { name, email, whatsapp, message, recaptchaToken } = body;
 
-    console.log('Sending email to:', process.env.RECIPIENT_EMAIL);
+    // Verify reCAPTCHA (using secret key - SAFE on server)
+    const recaptchaResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        secret: process.env.RECAPTCHA_SECRET_KEY,
+        response: recaptchaToken,
+      }),
+    });
+
+    const recaptchaData = await recaptchaResponse.json();
     
+    if (!recaptchaData.success) {
+      return Response.json(
+        { error: 'reCAPTCHA verification failed' },
+        { status: 400 }
+      );
+    }
+
+    // Send email with Resend
     const { data, error } = await resend.emails.send({
-      from: 'Cliente <noreply@dsarquitectura.cl>',
+      from: 'Cliente <noreply@dsarquitectura.cl>>',
       to: [process.env.RECIPIENT_EMAIL],
       subject: `Nuevo mensaje de ${name} - Arquitectura Portfolio`,
       html: `
@@ -24,14 +43,10 @@ export async function POST(request) {
       replyTo: email,
     });
 
-    if (error) {
-      console.error('Resend error:', error);
-      return Response.json({ error: error.message }, { status: 500 });
-    }
+    if (error) throw error;
 
     return Response.json({ success: true });
   } catch (error) {
-    console.error('Server error:', error);
     return Response.json({ error: error.message }, { status: 500 });
   }
 }

@@ -12,15 +12,9 @@ export default function ContactPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('1. Form submitted');
     
-    // Get reCAPTCHA token
-    console.log('2. Getting reCAPTCHA token...');
     const token = recaptchaRef.current.getValue();
-    console.log('3. Token received:', token ? 'YES' : 'NO');
-    
     if (!token) {
-      console.log('4. No token - showing error');
       setMessage('Por favor verifica que no eres un robot');
       setShowNotification(true);
       setTimeout(() => setShowNotification(false), 5000);
@@ -28,7 +22,6 @@ export default function ContactPage() {
     }
 
     setStatus('sending');
-    console.log('5. Status set to sending');
     
     const formData = new FormData(e.target);
     const data = {
@@ -38,33 +31,25 @@ export default function ContactPage() {
       message: formData.get('message'),
       recaptchaToken: token,
     };
-    console.log('6. Data prepared:', { ...data, recaptchaToken: 'HIDDEN' });
 
     try {
-      console.log('7. Sending fetch to /api/send-email...');
+      // ✅ Send to your API route (server-side)
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
-      
-      console.log('8. Response status:', response.status);
-      
-      const result = await response.json();
-      console.log('9. Response data:', result);
 
       if (response.ok) {
-        console.log('10. Success!');
         setStatus('success');
         setMessage('¡Mensaje enviado con éxito!');
         e.target.reset();
         recaptchaRef.current.reset();
       } else {
-        console.log('10. Error from server:', result);
-        throw new Error(result.error || 'Error al enviar');
+        const error = await response.json();
+        throw new Error(error.error || 'Error al enviar');
       }
     } catch (error) {
-      console.log('11. Catch error:', error.message);
       setStatus('error');
       setMessage(error.message || 'Hubo un error al enviar tu mensaje');
     }
@@ -73,10 +58,14 @@ export default function ContactPage() {
     setTimeout(() => setShowNotification(false), 5000);
   };
 
+  // ✅ Use NEXT_PUBLIC_ for the site key (this is SAFE)
+  const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
   return (
     <section className="min-h-screen bg-[#f6f6f2] py-16 px-4">
       <div className="max-w-2xl mx-auto">
         <form onSubmit={handleSubmit} className="space-y-6">
+          {/* Form fields (same as before) */}
           <div className="flex items-center gap-4">
             <label htmlFor="name" className="w-1/4 text-gray-800" style={leagueGothic.style}>
               Nombre:
@@ -136,14 +125,16 @@ export default function ContactPage() {
             />
           </div>
 
-          {/* reCAPTCHA */}
-          <div className="flex justify-center">
-            <ReCAPTCHA
-              ref={recaptchaRef}
-              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-              theme="light"
-            />
-          </div>
+          {/* reCAPTCHA - using public key only */}
+          {recaptchaSiteKey && (
+            <div className="flex justify-center">
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey={recaptchaSiteKey}
+                theme="light"
+              />
+            </div>
+          )}
           
           <div className="flex justify-end">
             <button
