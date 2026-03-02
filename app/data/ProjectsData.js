@@ -23,7 +23,7 @@ export const PROJECTS_DATA = [
   },
   {
     id: 2,
-    title: "Oficina Holding SS",
+    title: "Oficina Grupo MASA",
     place: "Santiago",
     year: "2022",
     featured: true,
@@ -61,25 +61,6 @@ export const PROJECTS_DATA = [
   },
   {
     id: 4,
-    title: "Sala Lavanderia Proyecto Casa A",
-    place: "Santiago",
-    year: "2022",
-    featured: true,
-    images: [
-      [
-        "https://res.cloudinary.com/dmivjpb65/image/upload/v1756304559/1_mhwctr.jpg",
-        "https://res.cloudinary.com/dmivjpb65/image/upload/v1756304560/2_bvdh4b.jpg",
-        "https://res.cloudinary.com/dmivjpb65/image/upload/v1756304560/3_yw54yk.jpg"
-      ],
-      [
-        "https://res.cloudinary.com/dmivjpb65/image/upload/v1756304560/4_wbblfh.jpg",
-        "https://res.cloudinary.com/dmivjpb65/image/upload/v1756304560/3_yw54yk.jpg",
-        "https://res.cloudinary.com/dmivjpb65/image/upload/v1756304559/1_mhwctr.jpg"
-      ]
-    ]
-  },
-  {
-    id: 5,
     title: "Detalles Proyecto Casa A",
     place: "Santiago",
     year: "2022",
@@ -98,7 +79,7 @@ export const PROJECTS_DATA = [
     ]
   },
   {
-    id: 6,
+    id: 5,
     title: "Dormitorio Principal Proyecto Casa A",
     place: "Santiago",
     year: "2022",
@@ -117,7 +98,7 @@ export const PROJECTS_DATA = [
     ]
   },
   {
-    id: 7,
+    id: 6,
     title: "Baño Visita Proyecto Casa A",
     place: "Santiago",
     year: "2022",
@@ -136,7 +117,7 @@ export const PROJECTS_DATA = [
     ]
   },
   {
-    id: 8,
+    id: 7,
     title: "Cocina Proyecto Bernardo Larrain",
     place: "Santiago",
     year: "2025",
@@ -155,7 +136,7 @@ export const PROJECTS_DATA = [
     ]
   },
   {
-    id: 9,
+    id: 8,
     title: "Cocina Proyecto Casa A",
     place: "Santiago",
     year: "2022",
@@ -174,7 +155,7 @@ export const PROJECTS_DATA = [
     ]
   },
   {
-    id: 10,
+    id: 9,
     title: "Comedor Proyecto Casa A",
     place: "Santiago",
     year: "2022",
@@ -193,7 +174,7 @@ export const PROJECTS_DATA = [
     ]
   },
   {
-    id: 11,
+    id: 10,
     title: "Terraza + Quinchos Proyecto Casa A",
     place: "Santiago",
     year: "2022",
@@ -212,7 +193,7 @@ export const PROJECTS_DATA = [
     ]
   },
   {
-    id: 12,
+    id: 11,
     title: "Sala de Estar Proyecto Casa A",
     place: "Santiago",
     year: "2022",
@@ -231,7 +212,7 @@ export const PROJECTS_DATA = [
     ]
   },
   {
-    id: 13,
+    id: 12,
     title: "Dormitorios Proyecto Casa A",
     place: "Santiago",
     year: "2022",
@@ -250,7 +231,7 @@ export const PROJECTS_DATA = [
     ]
   },
   {
-    id: 14,
+    id: 13,
     title: "Asesoria Quincho",
     place: "Santiago",
     year: "2025",

@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${abrilFatface.variable} ${hacenTunisia.variable} ${leagueGothic.variable}`}>
       <body>
         <Navbar />
-        <main className="min-h-screen pt-16 bg-sky-50">
+        <main className="min-h-screen pt-26 bg-sky-50">
           {children}
         </main>
         <Footer />

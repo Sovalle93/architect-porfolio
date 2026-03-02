@@ -1,13 +1,18 @@
 'use client'
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { PROJECTS_DATA } from '../data/ProjectsData';
 
 const HeroCarousel = () => {
-  // Collect all images from all projects
-  const allImages = PROJECTS_DATA.flatMap(project => 
-    project.images.flat() // Flatten all image groups into one array
-  );
+  // Curated selection of best images
+  const curatedImages = [
+    "https://res.cloudinary.com/dmivjpb65/image/upload/v1756388554/1_lpv14g.jpg",
+    "https://res.cloudinary.com/dmivjpb65/image/upload/v1756303840/2_jpmymx.jpg",
+    "https://res.cloudinary.com/dmivjpb65/image/upload/v1772473483/IMG_20240926_090238_zsy0y2.jpg",
+    "https://res.cloudinary.com/dmivjpb65/image/upload/v1772473526/IMG_20240926_102701_atb8ii.jpg",
+    "https://res.cloudinary.com/dmivjpb65/image/upload/v1756388372/2_inhctw.jpg",
+    "https://res.cloudinary.com/dmivjpb65/image/upload/v1756391142/2_jmxox5.jpg",
+    "https://res.cloudinary.com/dmivjpb65/image/upload/v1756388852/1_n9f05y.jpg"
+  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(1); // 1 for right, -1 for left
@@ -15,11 +20,11 @@ const HeroCarousel = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setDirection(1); // Always slide to the right
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % allImages.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % curatedImages.length);
     }, 5000); // Change image every 5 seconds
 
     return () => clearInterval(timer);
-  }, [allImages.length]);
+  }, [curatedImages.length]);
 
   // Variants for slide animation
   const slideVariants = {
@@ -50,9 +55,9 @@ const HeroCarousel = () => {
           className="absolute inset-0 flex items-center justify-center"
         >
           <img
-            src={allImages[currentIndex]}
-            alt={`Architecture project ${currentIndex + 1}`}
-            className="w-full h-full object-contain p-4 md:p-8 lg:p-12"
+            src={curatedImages[currentIndex]}
+            alt={`Featured project ${currentIndex + 1}`}
+            className="w-full h-full object-cover p-4 md:p-8 lg:p-12"
           />
         </motion.div>
       </AnimatePresence>
