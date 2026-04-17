@@ -1,3 +1,6 @@
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
 [build]
   publish = ".next"
   command = "npm run build"
@@ -6,3 +9,4 @@
   # This tells Netlify's secret scanner to ignore this specific key
   # because it's meant to be public (starts with NEXT_PUBLIC_)
   SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_RECAPTCHA_SITE_KEY"
+  NEXT_PRIVATE_STANDALONE = "true"

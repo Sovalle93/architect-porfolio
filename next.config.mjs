@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  output: 'standalone',  // This is critical for Netlify
+  images: {
+    unoptimized: true,    // Helps with Cloudinary images
+  },
+}
 
-export default nextConfig;
+module.exports = nextConfig
