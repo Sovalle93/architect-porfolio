@@ -249,4 +249,23 @@ export const PROJECTS_DATA = [
       ]
     ]
   },
+    {
+    id: 14,
+    title: "Quincho Terraza Jardín Los Trapenses",
+    place: "Santiago",
+    year: "2025",
+    featured: true,
+    images: [
+      [
+        "https://res.cloudinary.com/dmivjpb65/image/upload/v1776432632/IMG_20260324_122957_ldisnh.jpg",
+        "https://res.cloudinary.com/dmivjpb65/image/upload/v1776432881/IMG_20260324_123035_mkyipo.jpg",
+        "https://res.cloudinary.com/dmivjpb65/image/upload/v1776432882/IMG_20260324_123224_mtcym2.jpg"
+      ],
+      [
+        "https://res.cloudinary.com/dmivjpb65/image/upload/v1776432882/IMG_20260324_123427_vr4jw7.jpg",
+        "https://res.cloudinary.com/dmivjpb65/image/upload/v1776432882/IMG_20260324_123407_ma5llh.jpg",
+        "https://res.cloudinary.com/dmivjpb65/image/upload/v1776432883/IMG_20260324_123543_llof8n.jpg"
+      ]
+    ]
+  },
 ];

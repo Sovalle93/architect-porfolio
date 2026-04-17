@@ -23,7 +23,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex space-x-6 items-center">
-            <a href="https://www.instagram.com/" className="hover:text-gray-600 transition-colors duration-200 flex items-center space-x-2" aria-label="Instagram">
+            <a href="https://www.instagram.com/dsubercaseaux_arq" className="hover:text-gray-600 transition-colors duration-200 flex items-center space-x-2" aria-label="Instagram">
               <FaInstagram size={20} />
               <span className="font-league">Instagram</span>
             </a>
