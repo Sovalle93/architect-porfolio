@@ -6,6 +6,11 @@ import Footer from './components/Footer'
 export const metadata = {
   title: 'Denise Subercaseaux Arquitecta',
   description: 'Portafolio de Denise Subercaseaux, arquitecta especializada en diseño de interiores y mobiliario. Explora sus proyectos, objetos y contacto para colaboraciones.',
+  icons: {
+    icon: '/favicon.ico',      // Traditional favicon
+    shortcut: '/icon.png',      // Shortcut icon
+    apple: '/apple-icon.png',   // Apple touch icon
+  },
 }
 
 export default function RootLayout({ children }) {
