@@ -219,14 +219,14 @@ export const PROJECTS_DATA = [
     featured: true,
     images: [
       [
-        "https://res.cloudinary.com/dmivjpb65/image/upload/v1756391394/1_tteof8.jpg",
-        "https://res.cloudinary.com/dmivjpb65/image/upload/v1756391397/2_rxh66u.jpg",
-        "https://res.cloudinary.com/dmivjpb65/image/upload/v1756391402/3_jx5wbc.jpg"
+        "https://res.cloudinary.com/dmivjpb65/image/upload/v1778623724/1_tteof8.jpg",
+        "https://res.cloudinary.com/dmivjpb65/image/upload/v1778623732/2_rxh66u.jpg ",
+        "https://res.cloudinary.com/dmivjpb65/image/upload/v1778623741/3_jx5wbc.jpg"
       ],
       [
         "https://res.cloudinary.com/dmivjpb65/image/upload/v1756391406/4_krg3jv.jpg",
         "https://res.cloudinary.com/dmivjpb65/image/upload/v1756391411/5_sr1xno.jpg",
-        "https://res.cloudinary.com/dmivjpb65/image/upload/v1756391415/6_su9fmh.jpg"
+        "https://res.cloudinary.com/dmivjpb65/image/upload/v1778623751/6_su9fmh.jpg"
       ]
     ]
   },
@@ -249,7 +249,7 @@ export const PROJECTS_DATA = [
       ]
     ]
   },
-    {
+  {
     id: 14,
     title: "Quincho Terraza Jardín Los Trapenses",
     place: "Santiago",
@@ -265,6 +265,44 @@ export const PROJECTS_DATA = [
         "https://res.cloudinary.com/dmivjpb65/image/upload/v1776432882/IMG_20260324_123427_vr4jw7.jpg",
         "https://res.cloudinary.com/dmivjpb65/image/upload/v1776432882/IMG_20260324_123407_ma5llh.jpg",
         "https://res.cloudinary.com/dmivjpb65/image/upload/v1776432883/IMG_20260324_123543_llof8n.jpg"
+      ]
+    ]
+  },
+  {
+    id: 15,
+    title: "Quincho Casa MS",
+    place: "Santiago",
+    year: "2026",
+    featured: true,
+    images: [
+      [
+        "https://res.cloudinary.com/dmivjpb65/image/upload/v1778623510/1_cjkdvo.jpg",
+        "https://res.cloudinary.com/dmivjpb65/image/upload/v1778623608/2_pn5o7j.jpg",
+        "https://res.cloudinary.com/dmivjpb65/image/upload/v1778623609/3_onyizp.jpg"
+      ],
+      [
+        "https://res.cloudinary.com/dmivjpb65/image/upload/v1778623609/4_tzhv5t.jpg",
+        "https://res.cloudinary.com/dmivjpb65/image/upload/v1778623610/5_wrzlgf.jpg",
+        "https://res.cloudinary.com/dmivjpb65/image/upload/v1778623609/6_vfhome.jpg"
+      ]
+    ]
+  },
+  {
+    id: 16,
+    title: "Hall Entrada Casa A",
+    place: "Santiago",
+    year: "2026",
+    featured: true,
+    images: [
+      [
+        "https://res.cloudinary.com/dmivjpb65/image/upload/v1778624044/IMG_20260427_183154_1_vxlhit.jpg",
+        "https://res.cloudinary.com/dmivjpb65/image/upload/v1778624044/IMG_20260427_183205_1_j1kasq.jpg",
+        "https://res.cloudinary.com/dmivjpb65/image/upload/v1778624045/IMG_20260427_183219_1_nhlldx.jpg"
+      ],
+      [
+        "https://res.cloudinary.com/dmivjpb65/image/upload/v1778624045/IMG_20260427_183237_1_wpeenm.jpg",
+        "https://res.cloudinary.com/dmivjpb65/image/upload/v1778624045/IMG_20260427_183253_1_wq1vqz.jpg",
+        "https://res.cloudinary.com/dmivjpb65/image/upload/v1778624046/IMG_20260427_183317_1_flanbs.jpg"
       ]
     ]
   },
